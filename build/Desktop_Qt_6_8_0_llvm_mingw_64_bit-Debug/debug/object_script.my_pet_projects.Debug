@@ -1,0 +1,11 @@
+debug/calculator.o
+debug/clientserver.o
+debug/currencyconvert.o
+debug/main.o
+debug/mainwindow.o
+debug/server.o
+debug/moc_calculator.o
+debug/moc_clientserver.o
+debug/moc_currencyconvert.o
+debug/moc_mainwindow.o
+debug/moc_server.o

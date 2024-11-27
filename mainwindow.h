@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "currencyconvert.h"
 #include "calculator.h"
+#include "server.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -22,11 +23,13 @@ public:
 private slots:
     void on_currencyConvert_clicked();
     void on_Calculator_clicked();
+    void on_ClientServer_clicked();
 
 private:
     Ui::MainWindow *ui;
     CurrencyConvert *CurrencyConvertWindow;
     Calculator *CalculatorWindow;
+    Server *server;
 
 };
 #endif // MAINWINDOW_H

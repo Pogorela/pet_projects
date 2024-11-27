@@ -1,0 +1,11 @@
+release/calculator.o
+release/clientserver.o
+release/currencyconvert.o
+release/main.o
+release/mainwindow.o
+release/server.o
+release/moc_calculator.o
+release/moc_clientserver.o
+release/moc_currencyconvert.o
+release/moc_mainwindow.o
+release/moc_server.o

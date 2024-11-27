@@ -25,6 +25,7 @@ public:
     QWidget *centralwidget;
     QPushButton *currencyConvert;
     QPushButton *Calculator;
+    QPushButton *ClientServer;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -37,10 +38,19 @@ public:
         centralwidget->setObjectName("centralwidget");
         currencyConvert = new QPushButton(centralwidget);
         currencyConvert->setObjectName("currencyConvert");
-        currencyConvert->setGeometry(QRect(60, 40, 231, 111));
+        currencyConvert->setGeometry(QRect(70, 90, 200, 100));
+        currencyConvert->setMinimumSize(QSize(200, 100));
+        currencyConvert->setBaseSize(QSize(200, 100));
         Calculator = new QPushButton(centralwidget);
         Calculator->setObjectName("Calculator");
-        Calculator->setGeometry(QRect(60, 180, 231, 111));
+        Calculator->setGeometry(QRect(70, 220, 200, 100));
+        Calculator->setMinimumSize(QSize(200, 100));
+        Calculator->setBaseSize(QSize(200, 100));
+        ClientServer = new QPushButton(centralwidget);
+        ClientServer->setObjectName("ClientServer");
+        ClientServer->setGeometry(QRect(70, 350, 200, 100));
+        ClientServer->setMinimumSize(QSize(200, 100));
+        ClientServer->setBaseSize(QSize(200, 100));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -60,6 +70,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         currencyConvert->setText(QCoreApplication::translate("MainWindow", "\320\232\320\276\320\275\320\262\320\265\321\200\321\202\320\265\321\200 \320\262\320\260\320\273\321\216\321\202", nullptr));
         Calculator->setText(QCoreApplication::translate("MainWindow", "\320\232\320\260\320\273\321\214\320\272\321\203\320\273\321\217\321\202\320\276\321\200", nullptr));
+        ClientServer->setText(QCoreApplication::translate("MainWindow", "\320\232\320\273\320\270\320\265\320\275\321\202-\320\241\320\265\321\200\320\262\320\265\321\200", nullptr));
     } // retranslateUi
 
 };

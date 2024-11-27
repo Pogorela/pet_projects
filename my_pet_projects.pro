@@ -1,4 +1,4 @@
-QT       += core gui
+QT += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,17 +10,22 @@ CONFIG += c++17
 
 SOURCES += \
     calculator.cpp \
+    clientserver.cpp \
     currencyconvert.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    server.cpp
 
 HEADERS += \
     calculator.h \
+    clientserver.h \
     currencyconvert.h \
-    mainwindow.h
+    mainwindow.h \
+    server.h
 
 FORMS += \
     calculator.ui \
+    clientserver.ui \
     currencyconvert.ui \
     mainwindow.ui
 
