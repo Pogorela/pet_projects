@@ -82,6 +82,10 @@ Makefile: ../../my_pet_projects.pro ../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/w
 		../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_ext_freetype.pri \
 		../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_ext_libjpeg.pri \
 		../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_ext_libpng.pri \
+		../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_lib_charts.pri \
+		../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_lib_charts_private.pri \
+		../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_lib_chartsqml.pri \
+		../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_lib_chartsqml_private.pri \
 		../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_lib_concurrent.pri \
 		../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_lib_concurrent_private.pri \
 		../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_lib_core.pri \
@@ -280,6 +284,10 @@ Makefile: ../../my_pet_projects.pro ../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/w
 ../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_ext_freetype.pri:
 ../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_ext_libjpeg.pri:
 ../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_ext_libpng.pri:
+../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_lib_charts.pri:
+../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_lib_charts_private.pri:
+../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_lib_chartsqml.pri:
+../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_lib_chartsqml_private.pri:
 ../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_lib_concurrent.pri:
 ../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_lib_concurrent_private.pri:
 ../../../../Qt/6.8.0/llvm-mingw_64/mkspecs/modules/qt_lib_core.pri:

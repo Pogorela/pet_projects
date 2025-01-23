@@ -6,8 +6,10 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+
     ui->setupUi(this);
-    server = new Server();
+    AuthorizationWindow = new Authorization();
+    AuthorizationWindow->show();
 }
 
 MainWindow::~MainWindow()
@@ -26,5 +28,6 @@ void MainWindow::on_Calculator_clicked(){
 }
 void MainWindow::on_ClientServer_clicked()
 {
-
+    client = new ClientWindow();
+    client->show();
 }

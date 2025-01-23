@@ -9,23 +9,29 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    authorization.cpp \
     calculator.cpp \
     clientserver.cpp \
+    clientwindow.cpp \
     currencyconvert.cpp \
     main.cpp \
     mainwindow.cpp \
     server.cpp
 
 HEADERS += \
+    authorization.h \
     calculator.h \
     clientserver.h \
+    clientwindow.h \
     currencyconvert.h \
     mainwindow.h \
     server.h
 
 FORMS += \
+    authorization.ui \
     calculator.ui \
     clientserver.ui \
+    clientwindow.ui \
     currencyconvert.ui \
     mainwindow.ui
 

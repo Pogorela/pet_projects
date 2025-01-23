@@ -14,10 +14,10 @@ public:
 private:
     QVector <QTcpSocket*> Sockets;
     QByteArray Data;
-    void SendToClient();
+    void SendToClient(QString message);
 
 public slots:
-    void incommingConnecting(qintptr socketDiscriptor);
+    void incomingConnection(qintptr socketDiscriptor);
     void ReadyToRead();
 };
 

@@ -5,6 +5,8 @@
 #include "currencyconvert.h"
 #include "calculator.h"
 #include "server.h"
+#include "clientwindow.h"
+#include "authorization.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -29,7 +31,8 @@ private:
     Ui::MainWindow *ui;
     CurrencyConvert *CurrencyConvertWindow;
     Calculator *CalculatorWindow;
-    Server *server;
+    ClientWindow *client;
+    Authorization *AuthorizationWindow;
 
 };
 #endif // MAINWINDOW_H

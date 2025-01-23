@@ -36,7 +36,7 @@ namespace {
 struct qt_meta_stringdata_CLASSServerENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSServerENDCLASS = QtMocHelpers::stringData(
     "Server",
-    "incommingConnecting",
+    "incomingConnection",
     "",
     "qintptr",
     "socketDiscriptor",
@@ -80,7 +80,7 @@ Q_CONSTINIT const QMetaObject Server::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSServerENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<Server, std::true_type>,
-        // method 'incommingConnecting'
+        // method 'incomingConnection'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<qintptr, std::false_type>,
         // method 'ReadyToRead'
@@ -95,7 +95,7 @@ void Server::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         auto *_t = static_cast<Server *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->incommingConnecting((*reinterpret_cast< std::add_pointer_t<qintptr>>(_a[1]))); break;
+        case 0: _t->incomingConnection((*reinterpret_cast< std::add_pointer_t<qintptr>>(_a[1]))); break;
         case 1: _t->ReadyToRead(); break;
         default: ;
         }

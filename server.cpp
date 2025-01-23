@@ -2,7 +2,7 @@
 
 Server::Server()
 {
-    if(this->listen(QHostAddress::Any,1905))
+    if(this->listen(QHostAddress::Any,2323))
     {
         qDebug() << "start";
     }
@@ -11,7 +11,7 @@ Server::Server()
         qDebug() << "error";
     }
 }
-void Server::incommingConnecting(qintptr socketDiscriptor)
+void Server::incomingConnection(qintptr socketDiscriptor)
 {
     socket = new QTcpSocket;
     socket->setSocketDescriptor(socketDiscriptor);
@@ -29,9 +29,23 @@ void Server::ReadyToRead()
     if(in.status() == QDataStream::Ok)
     {
         qDebug() << "read...";
+        QString str;
+        in >> str;
+        Server::SendToClient(str);
     }
     else
     {
         qDebug() << "DataStream error";
+    }
+}
+void Server::SendToClient(QString message){
+    Data.clear();
+    QDataStream out(&Data,QDataStream::WriteOnly);
+    out.setVersion(QDataStream::Qt_6_8);
+    out << message;
+    //socket->write(Data);
+    for(int i = 0;i < Sockets.size();i++)
+    {
+        Sockets[i]->write(Data);
     }
 }
