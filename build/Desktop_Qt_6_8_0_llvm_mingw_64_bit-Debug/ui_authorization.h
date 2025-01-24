@@ -47,7 +47,15 @@ public:
         if (Authorization->objectName().isEmpty())
             Authorization->setObjectName("Authorization");
         Authorization->setWindowModality(Qt::WindowModality::ApplicationModal);
+        Authorization->setEnabled(true);
         Authorization->resize(779, 479);
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(Authorization->sizePolicy().hasHeightForWidth());
+        Authorization->setSizePolicy(sizePolicy);
+        Authorization->setMouseTracking(false);
+        Authorization->setContextMenuPolicy(Qt::ContextMenuPolicy::DefaultContextMenu);
         stackedWidget = new QStackedWidget(Authorization);
         stackedWidget->setObjectName("stackedWidget");
         stackedWidget->setGeometry(QRect(0, 0, 771, 471));
@@ -70,7 +78,7 @@ public:
         label_3->setGeometry(QRect(380, 230, 61, 20));
         label_4 = new QLabel(authorizationPage);
         label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(20, 30, 221, 20));
+        label_4->setGeometry(QRect(30, 40, 201, 20));
         registrationPageButton = new QPushButton(authorizationPage);
         registrationPageButton->setObjectName("registrationPageButton");
         registrationPageButton->setGeometry(QRect(30, 80, 171, 61));
@@ -85,7 +93,7 @@ public:
         label_5->setGeometry(QRect(360, 30, 91, 20));
         registrationButton = new QPushButton(registrationPage);
         registrationButton->setObjectName("registrationButton");
-        registrationButton->setGeometry(QRect(320, 370, 161, 51));
+        registrationButton->setGeometry(QRect(330, 370, 161, 51));
         loginRegLineEdit = new QLineEdit(registrationPage);
         loginRegLineEdit->setObjectName("loginRegLineEdit");
         loginRegLineEdit->setGeometry(QRect(292, 110, 231, 28));
@@ -103,12 +111,12 @@ public:
         label_7->setGeometry(QRect(380, 150, 63, 20));
         label_8 = new QLabel(registrationPage);
         label_8->setObjectName("label_8");
-        label_8->setGeometry(QRect(320, 220, 181, 20));
+        label_8->setGeometry(QRect(330, 220, 181, 20));
         stackedWidget->addWidget(registrationPage);
 
         retranslateUi(Authorization);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Authorization);

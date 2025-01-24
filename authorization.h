@@ -2,7 +2,8 @@
 #define AUTHORIZATION_H
 
 #include <QWidget>
-
+#include <QtSql/QSqlDatabase>
+#include <QSqlQuery>
 
 namespace Ui {
 class Authorization;
@@ -18,9 +19,20 @@ public:
 
 private slots:
     void on_enterButton_clicked();
+    void on_registrationPageButton_clicked();
+
+    void on_registrationButton_clicked();
+
+signals:
+    void setAuthorizated(bool isAuthorizated);
+
 
 private:
+    bool isAuthorizated;
     Ui::Authorization *ui;
+    QSqlDatabase db;
+    QSqlQuery *query;
+
 };
 
 #endif // AUTHORIZATION_H

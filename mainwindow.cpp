@@ -10,6 +10,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     AuthorizationWindow = new Authorization();
     AuthorizationWindow->show();
+
+    connect(AuthorizationWindow,&Authorization::setAuthorizated,this,&MainWindow::setAuthorizated);
 }
 
 MainWindow::~MainWindow()
@@ -30,4 +32,11 @@ void MainWindow::on_ClientServer_clicked()
 {
     client = new ClientWindow();
     client->show();
+}
+void MainWindow::setAuthorizated(bool isAuthorizated)
+{
+    if (isAuthorizated == false)
+    {
+        close();
+    }
 }

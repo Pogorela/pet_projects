@@ -5,6 +5,9 @@
   <property name="windowModality">
    <enum>Qt::WindowModality::ApplicationModal</enum>
   </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -12,6 +15,18 @@
     <width>779</width>
     <height>479</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -26,7 +41,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="authorizationPage">
     <widget class="QLineEdit" name="loginEnterLineEdit">
@@ -94,9 +109,9 @@
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>30</y>
-       <width>221</width>
+       <x>30</x>
+       <y>40</y>
+       <width>201</width>
        <height>20</height>
       </rect>
      </property>
@@ -148,7 +163,7 @@
     <widget class="QPushButton" name="registrationButton">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>330</x>
        <y>370</y>
        <width>161</width>
        <height>51</height>
@@ -217,7 +232,7 @@
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>330</x>
        <y>220</y>
        <width>181</width>
        <height>20</height>
