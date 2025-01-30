@@ -31,7 +31,7 @@ signals:
 
 
 private:
-    bool isAuthorizated;
+    bool isAuthorizated = false;;
     Ui::Authorization *ui;
     QSqlDatabase db;
     QSqlQuery *query;
