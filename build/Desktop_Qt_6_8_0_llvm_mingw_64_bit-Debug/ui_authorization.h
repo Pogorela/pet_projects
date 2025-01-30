@@ -41,6 +41,8 @@ public:
     QLabel *label_6;
     QLabel *label_7;
     QLabel *label_8;
+    QLabel *label_9;
+    QPushButton *authorizationPageButton;
 
     void setupUi(QWidget *Authorization)
     {
@@ -63,19 +65,19 @@ public:
         authorizationPage->setObjectName("authorizationPage");
         loginEnterLineEdit = new QLineEdit(authorizationPage);
         loginEnterLineEdit->setObjectName("loginEnterLineEdit");
-        loginEnterLineEdit->setGeometry(QRect(290, 190, 221, 21));
+        loginEnterLineEdit->setGeometry(QRect(290, 180, 221, 31));
         label = new QLabel(authorizationPage);
         label->setObjectName("label");
-        label->setGeometry(QRect(380, 160, 51, 20));
+        label->setGeometry(QRect(380, 150, 51, 20));
         label_2 = new QLabel(authorizationPage);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(360, 30, 91, 20));
         passwordEnterLineEdit = new QLineEdit(authorizationPage);
         passwordEnterLineEdit->setObjectName("passwordEnterLineEdit");
-        passwordEnterLineEdit->setGeometry(QRect(290, 260, 221, 21));
+        passwordEnterLineEdit->setGeometry(QRect(290, 250, 221, 31));
         label_3 = new QLabel(authorizationPage);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(380, 230, 61, 20));
+        label_3->setGeometry(QRect(380, 220, 61, 20));
         label_4 = new QLabel(authorizationPage);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(30, 40, 201, 20));
@@ -112,11 +114,17 @@ public:
         label_8 = new QLabel(registrationPage);
         label_8->setObjectName("label_8");
         label_8->setGeometry(QRect(330, 220, 181, 20));
+        label_9 = new QLabel(registrationPage);
+        label_9->setObjectName("label_9");
+        label_9->setGeometry(QRect(50, 30, 221, 21));
+        authorizationPageButton = new QPushButton(registrationPage);
+        authorizationPageButton->setObjectName("authorizationPageButton");
+        authorizationPageButton->setGeometry(QRect(50, 70, 171, 61));
         stackedWidget->addWidget(registrationPage);
 
         retranslateUi(Authorization);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Authorization);
@@ -137,6 +145,8 @@ public:
         label_6->setText(QCoreApplication::translate("Authorization", "\320\233\320\276\320\263\320\270\320\275", nullptr));
         label_7->setText(QCoreApplication::translate("Authorization", "\320\237\320\260\321\200\320\276\320\273\321\214", nullptr));
         label_8->setText(QCoreApplication::translate("Authorization", "\320\237\320\276\320\264\321\202\320\262\320\265\321\200\320\266\320\264\320\265\320\275\320\270\320\265 \320\277\320\260\321\200\320\276\320\273\321\217", nullptr));
+        label_9->setText(QCoreApplication::translate("Authorization", "\320\225\321\201\320\273\320\270 \321\203 \320\262\320\260\321\201 \321\203\320\266\320\265 \320\265\321\201\321\202\321\214 \320\260\320\272\320\272\320\260\321\203\320\275\321\202", nullptr));
+        authorizationPageButton->setText(QCoreApplication::translate("Authorization", "\320\220\320\262\321\202\320\276\321\200\320\270\320\267\320\276\320\262\320\260\321\202\321\214\321\201\321\217", nullptr));
     } // retranslateUi
 
 };

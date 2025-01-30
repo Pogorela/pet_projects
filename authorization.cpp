@@ -61,20 +61,43 @@ void Authorization::on_registrationButton_clicked()
 {
     if(ui->loginRegLineEdit->text() != "" && ui->passwordRegLineEdit->text() != "" && ui->confirmPasswordRegLineEdit->text() != "")
     {
-        if (ui->passwordRegLineEdit->text() == ui->confirmPasswordRegLineEdit->text())
+        query->exec(QString("SELECT Login,Password FROM UserData WHERE Login='%1';").arg(ui->loginRegLineEdit->text()));
+        query->next();
+        if (query->value(0).toString() == "")
         {
-            query->exec(QString("INSERT INTO UserData (Login,Password) VALUES ('%1','%2');").arg(ui->loginRegLineEdit->text(),ui->passwordRegLineEdit->text()));
+            if (ui->passwordRegLineEdit->text() == ui->confirmPasswordRegLineEdit->text())
+            {
+                query->exec(QString("INSERT INTO UserData (Login,Password) VALUES ('%1','%2');").arg(ui->loginRegLineEdit->text(),ui->passwordRegLineEdit->text()));
+                QMessageBox regMessageBox;
+                regMessageBox.setFixedSize(500,200);
+                regMessageBox.information(0,"Вы зарегистрированы!","Поздравляю, вы зарегистрировали аккаунт!");
+            }
+            else
+            {
+                QMessageBox errorMessageBox;
+                errorMessageBox.setFixedSize(500,200);
+                errorMessageBox.critical(0,"Error","Пароли не совпадают!");
+            }
         }
         else
         {
             QMessageBox errorMessageBox;
             errorMessageBox.setFixedSize(500,200);
-            errorMessageBox.critical(0,"Error","Пароли не совпадают!");
+            errorMessageBox.critical(0,"Error","Такой логин уже используется!");
         }
     }
     else
     {
-        return;
+        QMessageBox errorMessageBox;
+        errorMessageBox.setFixedSize(500,200);
+        errorMessageBox.critical(0,"Error","Проверьте, заполнены ли все поля!");
     }
+}
+
+
+void Authorization::on_authorizationPageButton_clicked()
+{
+    ui->registrationPage->close();
+    ui->authorizationPage->show();
 }
 

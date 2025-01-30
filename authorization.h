@@ -23,6 +23,9 @@ private slots:
 
     void on_registrationButton_clicked();
 
+
+    void on_authorizationPageButton_clicked();
+
 signals:
     void setAuthorizated(bool isAuthorizated);
 
