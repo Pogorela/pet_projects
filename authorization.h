@@ -26,6 +26,11 @@ private slots:
 
     void on_authorizationPageButton_clicked();
 
+
+    void on_loginEnterLineEdit_returnPressed();
+
+    void on_passwordEnterLineEdit_returnPressed();
+
 signals:
     void setAuthorizated(bool isAuthorizated);
 

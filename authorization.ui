@@ -29,7 +29,7 @@
    <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Погорелов Илья</string>
   </property>
   <widget class="QStackedWidget" name="stackedWidget">
    <property name="geometry">
@@ -41,7 +41,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="authorizationPage">
     <widget class="QLineEdit" name="loginEnterLineEdit">
@@ -89,8 +89,17 @@
        <height>31</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">lineedit-password-character: 9679;</string>
+     </property>
      <property name="text">
       <string/>
+     </property>
+     <property name="maxLength">
+      <number>32775</number>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::EchoMode::Password</enum>
      </property>
     </widget>
     <widget class="QLabel" name="label_3">
@@ -144,6 +153,12 @@
      <property name="text">
       <string>Вход</string>
      </property>
+     <property name="autoDefault">
+      <bool>true</bool>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="registrationPage">
@@ -192,6 +207,12 @@
        <height>28</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">lineedit-password-character: 9679;</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::EchoMode::Password</enum>
+     </property>
     </widget>
     <widget class="QLineEdit" name="confirmPasswordRegLineEdit">
      <property name="geometry">
@@ -201,6 +222,12 @@
        <width>231</width>
        <height>28</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">lineedit-password-character: 9679;</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::EchoMode::Password</enum>
      </property>
     </widget>
     <widget class="QLabel" name="label_6">

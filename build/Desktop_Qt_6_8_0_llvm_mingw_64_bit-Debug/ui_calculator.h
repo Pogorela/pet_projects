@@ -165,7 +165,7 @@ public:
 
     void retranslateUi(QWidget *Calculator)
     {
-        Calculator->setWindowTitle(QCoreApplication::translate("Calculator", "Form", nullptr));
+        Calculator->setWindowTitle(QCoreApplication::translate("Calculator", "\320\232\320\260\320\273\321\214\320\272\321\203\320\273\321\217\321\202\320\276\321\200", nullptr));
         SevenButton->setText(QCoreApplication::translate("Calculator", "7", nullptr));
         EightButton->setText(QCoreApplication::translate("Calculator", "8", nullptr));
         NineButton->setText(QCoreApplication::translate("Calculator", "9", nullptr));

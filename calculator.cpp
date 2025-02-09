@@ -1,6 +1,7 @@
 #include "calculator.h"
 #include "ui_calculator.h"
 #include <QWidget>
+#include <QMessageBox>
 
 Calculator::Calculator(QWidget *parent)
     : QWidget(parent)
@@ -88,7 +89,12 @@ void Calculator::on_DivisionButton_clicked(){
     }
     else{
         if (Calculator::Value.toInt() == 0 && Calculator::Value.size() > 0){
-            ErrorMessage();
+            QMessageBox nullError;
+            nullError.setBaseSize(500,200);
+            nullError.information(0,"Ошибка","Делить на ноль нельзя!!!");
+            Calculator::Buffer = 0;
+            Calculator::Value = 0;
+            ui->clearButton->setText("C");
         }
         else{
             Calculator::Buffer /= Calculator::Value.toInt();

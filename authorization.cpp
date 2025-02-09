@@ -123,3 +123,80 @@ void Authorization::on_authorizationPageButton_clicked()
     ui->authorizationPage->show();
 }
 
+void Authorization::on_loginEnterLineEdit_returnPressed()
+{
+    if (ui->loginEnterLineEdit->text() != "" && ui->passwordEnterLineEdit->text() != "")
+    {
+        query->exec(QString("SELECT Login,Password FROM UserData Where Login='%1' and Password='%2'").arg(ui->loginEnterLineEdit->text(),ui->passwordEnterLineEdit->text()));
+        query->next();
+        qDebug() << query->value(0).toString();
+        if (query->value(0).toString() != "")
+        {
+            isAuthorizated = true;
+            close();
+        }
+        else
+        {
+            query->exec(QString("SELECT Password FROM UserData Where Login='%1'").arg(ui->loginEnterLineEdit->text()));
+            query->next();
+            if (query->value(0).toString()=="")
+            {
+                QMessageBox errorMessageBox;
+                errorMessageBox.setFixedSize(500,200);
+                errorMessageBox.critical(0,"Error","Такого пользователя не существует!");
+            }
+            else
+            {
+                QMessageBox errorMessageBox;
+                errorMessageBox.setFixedSize(500,200);
+                errorMessageBox.critical(0,"Error","Неверный пароль");
+            }
+        }
+    }
+    else
+    {
+        QMessageBox errorMessageBox;
+        errorMessageBox.setFixedSize(500,200);
+        errorMessageBox.critical(0,"Error","Пожалуйста, авторизируйтесь");
+    }
+}
+
+
+void Authorization::on_passwordEnterLineEdit_returnPressed()
+{
+    if (ui->loginEnterLineEdit->text() != "" && ui->passwordEnterLineEdit->text() != "")
+    {
+        query->exec(QString("SELECT Login,Password FROM UserData Where Login='%1' and Password='%2'").arg(ui->loginEnterLineEdit->text(),ui->passwordEnterLineEdit->text()));
+        query->next();
+        qDebug() << query->value(0).toString();
+        if (query->value(0).toString() != "")
+        {
+            isAuthorizated = true;
+            close();
+        }
+        else
+        {
+            query->exec(QString("SELECT Password FROM UserData Where Login='%1'").arg(ui->loginEnterLineEdit->text()));
+            query->next();
+            if (query->value(0).toString()=="")
+            {
+                QMessageBox errorMessageBox;
+                errorMessageBox.setFixedSize(500,200);
+                errorMessageBox.critical(0,"Error","Такого пользователя не существует!");
+            }
+            else
+            {
+                QMessageBox errorMessageBox;
+                errorMessageBox.setFixedSize(500,200);
+                errorMessageBox.critical(0,"Error","Неверный пароль");
+            }
+        }
+    }
+    else
+    {
+        QMessageBox errorMessageBox;
+        errorMessageBox.setFixedSize(500,200);
+        errorMessageBox.critical(0,"Error","Пожалуйста, авторизируйтесь");
+    }
+}
+

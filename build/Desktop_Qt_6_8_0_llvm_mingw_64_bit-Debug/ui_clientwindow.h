@@ -85,7 +85,7 @@ public:
 
     void retranslateUi(QWidget *ClientWindow)
     {
-        ClientWindow->setWindowTitle(QCoreApplication::translate("ClientWindow", "Form", nullptr));
+        ClientWindow->setWindowTitle(QCoreApplication::translate("ClientWindow", "\320\247\320\260\321\202", nullptr));
         pushButton->setText(QCoreApplication::translate("ClientWindow", "\320\236\321\202\320\277\321\200\320\260\320\262\320\270\321\202\321\214", nullptr));
         label->setText(QCoreApplication::translate("ClientWindow", "\320\247\320\260\321\202", nullptr));
         connectButton->setText(QCoreApplication::translate("ClientWindow", "\320\237\320\276\320\264\320\272\320\273\321\216\321\207\320\270\321\202\321\214\321\201\321\217 \320\272 \321\201\320\265\321\200\320\262\320\265\321\200\321\203", nullptr));

@@ -6,6 +6,7 @@ release/currencyconvert.o
 release/main.o
 release/mainwindow.o
 release/server.o
+release/qrc_resources.o
 release/moc_authorization.o
 release/moc_calculator.o
 release/moc_clientserver.o

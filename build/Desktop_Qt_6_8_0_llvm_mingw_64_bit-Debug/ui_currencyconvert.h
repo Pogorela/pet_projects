@@ -76,7 +76,7 @@ public:
 
     void retranslateUi(QWidget *CurrencyConvert)
     {
-        CurrencyConvert->setWindowTitle(QCoreApplication::translate("CurrencyConvert", "Currency converter", nullptr));
+        CurrencyConvert->setWindowTitle(QCoreApplication::translate("CurrencyConvert", "\320\232\320\276\320\275\320\262\320\265\321\200\321\202\320\265\321\200 \320\262\320\260\320\273\321\216\321\202", nullptr));
         FromCurrencyComboBox->setItemText(0, QCoreApplication::translate("CurrencyConvert", "RUB", nullptr));
         FromCurrencyComboBox->setItemText(1, QCoreApplication::translate("CurrencyConvert", "USD", nullptr));
         FromCurrencyComboBox->setItemText(2, QCoreApplication::translate("CurrencyConvert", "CNY", nullptr));

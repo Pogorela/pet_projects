@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Currency converter</string>
+   <string>Конвертер валют</string>
   </property>
   <widget class="QComboBox" name="FromCurrencyComboBox">
    <property name="geometry">

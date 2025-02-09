@@ -58,11 +58,13 @@ void ClientWindow::SendToServer(QString message){
 void ClientWindow::on_pushButton_clicked()
 {
     SendToServer(ui->lineEdit->text());
+    ui->lineEdit->setText("");
 }
 
 
 void ClientWindow::on_lineEdit_returnPressed()
 {
     SendToServer(ui->lineEdit->text());
+    ui->lineEdit->setText("");
 }
 

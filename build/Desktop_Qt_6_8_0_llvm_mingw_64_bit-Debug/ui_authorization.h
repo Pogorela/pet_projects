@@ -75,6 +75,9 @@ public:
         passwordEnterLineEdit = new QLineEdit(authorizationPage);
         passwordEnterLineEdit->setObjectName("passwordEnterLineEdit");
         passwordEnterLineEdit->setGeometry(QRect(290, 250, 221, 31));
+        passwordEnterLineEdit->setStyleSheet(QString::fromUtf8("lineedit-password-character: 9679;"));
+        passwordEnterLineEdit->setMaxLength(32775);
+        passwordEnterLineEdit->setEchoMode(QLineEdit::EchoMode::Password);
         label_3 = new QLabel(authorizationPage);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(380, 220, 61, 20));
@@ -87,6 +90,7 @@ public:
         enterButton = new QPushButton(authorizationPage);
         enterButton->setObjectName("enterButton");
         enterButton->setGeometry(QRect(340, 320, 121, 51));
+        enterButton->setAutoDefault(true);
         stackedWidget->addWidget(authorizationPage);
         registrationPage = new QWidget();
         registrationPage->setObjectName("registrationPage");
@@ -102,9 +106,13 @@ public:
         passwordRegLineEdit = new QLineEdit(registrationPage);
         passwordRegLineEdit->setObjectName("passwordRegLineEdit");
         passwordRegLineEdit->setGeometry(QRect(292, 180, 231, 28));
+        passwordRegLineEdit->setStyleSheet(QString::fromUtf8("lineedit-password-character: 9679;"));
+        passwordRegLineEdit->setEchoMode(QLineEdit::EchoMode::Password);
         confirmPasswordRegLineEdit = new QLineEdit(registrationPage);
         confirmPasswordRegLineEdit->setObjectName("confirmPasswordRegLineEdit");
         confirmPasswordRegLineEdit->setGeometry(QRect(292, 250, 231, 28));
+        confirmPasswordRegLineEdit->setStyleSheet(QString::fromUtf8("lineedit-password-character: 9679;"));
+        confirmPasswordRegLineEdit->setEchoMode(QLineEdit::EchoMode::Password);
         label_6 = new QLabel(registrationPage);
         label_6->setObjectName("label_6");
         label_6->setGeometry(QRect(380, 80, 63, 20));
@@ -124,7 +132,8 @@ public:
 
         retranslateUi(Authorization);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(1);
+        enterButton->setDefault(true);
 
 
         QMetaObject::connectSlotsByName(Authorization);
@@ -132,7 +141,7 @@ public:
 
     void retranslateUi(QWidget *Authorization)
     {
-        Authorization->setWindowTitle(QCoreApplication::translate("Authorization", "Form", nullptr));
+        Authorization->setWindowTitle(QCoreApplication::translate("Authorization", "\320\237\320\276\320\263\320\276\321\200\320\265\320\273\320\276\320\262 \320\230\320\273\321\214\321\217", nullptr));
         label->setText(QCoreApplication::translate("Authorization", "\320\233\320\276\320\263\320\270\320\275", nullptr));
         label_2->setText(QCoreApplication::translate("Authorization", "\320\220\320\262\321\202\320\276\321\200\320\270\320\267\320\260\321\206\320\270\321\217", nullptr));
         passwordEnterLineEdit->setText(QString());

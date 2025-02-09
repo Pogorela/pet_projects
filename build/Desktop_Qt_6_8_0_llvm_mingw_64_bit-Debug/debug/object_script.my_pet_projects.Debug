@@ -6,6 +6,7 @@ debug/currencyconvert.o
 debug/main.o
 debug/mainwindow.o
 debug/server.o
+debug/qrc_resources.o
 debug/moc_authorization.o
 debug/moc_calculator.o
 debug/moc_clientserver.o

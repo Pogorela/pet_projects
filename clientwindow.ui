@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Чат</string>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
